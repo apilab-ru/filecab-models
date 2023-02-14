@@ -1,6 +1,10 @@
-import { GenreKind } from '../genres/const';
+export enum GenreKind {
+  anime = 'anime',
+  manga = 'manga',
+  tv = 'tv',
+  films = 'films'
+}
 
-export { GenreKind };
 export interface Genre {
   id: number;
   name: string;
