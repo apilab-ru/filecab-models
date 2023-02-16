@@ -1,6 +1,6 @@
 export interface MetaData {
   tags?: string[];
-  status?: string;
+  status?: string | null;
   url?: string;
   star?: number;
   comment?: string;

@@ -1,5 +1,6 @@
 import { LibraryItemType } from './anime';
 import { MetaData } from './meta-data';
+import { Types } from "./types";
 
 export interface Tag {
   name: string;
@@ -13,6 +14,10 @@ export interface Library {
 
 export interface LibraryItem extends MetaData {
   item: MediaItem;
+}
+
+export interface PreparedItem extends LibraryItem {
+  type: Types;
 }
 
 export interface MediaItem {
