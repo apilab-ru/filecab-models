@@ -20,6 +20,10 @@ export interface PreparedItem extends LibraryItem {
   type: Types;
 }
 
+export interface LibraryItemV2 extends MetaData {
+  item: MediaItemV2;
+}
+
 export interface MediaItem {
   title: string;
   image: string;
@@ -34,6 +38,20 @@ export interface MediaItem {
   imdbId?: number;
   smotretId?: number;
   kinopoiskId?: number;
+  genreIds: number[];
+  originalTitle: string;
+  type: LibraryItemType;
+}
+
+export interface MediaItemV2 {
+  title: string;
+  image: string;
+  description: string;
+  episodes?: number;
+  popularity: number;
+  year: number;
+  id: number;
+  url: string;
   genreIds: number[];
   originalTitle: string;
   type: LibraryItemType;
