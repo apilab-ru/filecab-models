@@ -20,6 +20,16 @@ export interface PreparedItem extends LibraryItem {
   type: Types;
 }
 
+export interface ManuResultItem {
+  item: PreparedItem;
+  list: MediaItemV2[];
+}
+
+export interface MigrationResult {
+  migrated: LibraryItemV2[];
+  manyResults: ManuResultItem[];
+}
+
 export interface LibraryItemV2 extends MetaData {
   item: MediaItemV2;
 }
