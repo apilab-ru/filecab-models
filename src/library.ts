@@ -1,5 +1,5 @@
 import { LibraryItemType } from './anime';
-import { MetaData } from './meta-data';
+import { MetaData, MetaDataV2 } from './meta-data';
 import { Types } from "./types";
 
 export interface Tag {
@@ -20,17 +20,17 @@ export interface PreparedItem extends LibraryItem {
   type: Types;
 }
 
-export interface ManuResultItem {
+export interface ManyResultItem {
   item: PreparedItem;
   list: MediaItemV2[];
 }
 
 export interface MigrationResult {
   migrated: LibraryItemV2[];
-  manyResults: ManuResultItem[];
+  manyResults: ManyResultItem[];
 }
 
-export interface LibraryItemV2 extends MetaData {
+export interface LibraryItemV2 extends MetaDataV2 {
   item: MediaItemV2;
 }
 
