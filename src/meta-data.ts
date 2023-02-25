@@ -1,3 +1,5 @@
+import { Types } from "./types";
+
 export interface MetaData {
   tags?: string[];
   status?: string | null;
@@ -7,6 +9,10 @@ export interface MetaData {
   progress?: number;
   founded?: boolean;
   name?: string;
-  dateAd?: string;
-  dateChange?: string;
+}
+
+export interface MetaDataV2 extends MetaData {
+  type: Types;
+  dateAd: string;
+  dateChange: string;
 }
