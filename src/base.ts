@@ -1,4 +1,5 @@
 import { LibraryItemType } from './anime';
+import { Types } from "./types";
 
 export interface Item {
   id: number;
@@ -40,3 +41,16 @@ export interface SearchRequest {
   genre?: string; //ids
   year?: string; //ids
 }
+
+export interface AnimeSearchV2Query extends SearchRequest {
+  shikimoriId?: number;
+  smotretId?: number;
+}
+
+export interface FilmSearchParams extends SearchRequest {
+  kinopoiskId?: number;
+  imdbId?: number;
+  type?: Types;
+}
+
+

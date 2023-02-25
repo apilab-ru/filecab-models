@@ -59,6 +59,7 @@ export enum LibraryItemType {
   special = 'special',
   ova = 'ova',
   ona = 'ona',
+  music = 'music',
 }
 
 export interface AnimeGenre {

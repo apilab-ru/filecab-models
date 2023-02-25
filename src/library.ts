@@ -32,6 +32,7 @@ export interface MigrationResult {
 
 export interface LibraryItemV2 extends MetaData {
   item: MediaItemV2;
+  type: Types;
 }
 
 export interface MediaItem {
@@ -53,14 +54,22 @@ export interface MediaItem {
   type: LibraryItemType;
 }
 
-export interface MediaItemV2 {
+export interface MediaItemId {
+  id: number;
+  shikimoriId?: number;
+  aniDbId?: number;
+  imdbId?: number;
+  smotretId?: number;
+  kinopoiskId?: number;
+}
+
+export interface MediaItemV2 extends MediaItemId {
   title: string;
   image: string;
   description: string;
   episodes?: number;
   popularity: number;
   year: number;
-  id: number;
   url: string;
   genreIds: number[];
   originalTitle: string;
