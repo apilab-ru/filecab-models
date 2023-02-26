@@ -42,7 +42,26 @@ export interface SearchRequest {
   year?: string; //ids
 }
 
+export function extractSearchId<T extends SearchId>(data: T): SearchId | undefined {
+  const fields: (keyof SearchId)[]= ['id', 'shikimoriId', 'smotretId', 'kinopoiskId', 'imdbId'];
+
+  if (fields.every(key => !data[key])) {
+    return undefined;
+  }
+
+  const result: SearchId = {};
+
+  fields.forEach((key) => {
+    if (data[key]) {
+      result[key] = data[key];
+    }
+  })
+
+  return result;
+}
+
 export interface SearchId {
+  id?: number;
   shikimoriId?: number;
   smotretId?: number;
   kinopoiskId?: number;
