@@ -42,6 +42,13 @@ export interface SearchRequest {
   year?: string; //ids
 }
 
+export interface SearchId {
+  shikimoriId?: number;
+  smotretId?: number;
+  kinopoiskId?: number;
+  imdbId?: number;
+}
+
 export interface AnimeSearchV2Query extends SearchRequest {
   shikimoriId?: number;
   smotretId?: number;
