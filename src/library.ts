@@ -18,6 +18,8 @@ export interface LibraryItem extends MetaData {
 
 export interface PreparedItem extends LibraryItem {
   type: Types;
+  dateAd: string;
+  dateChange: string;
 }
 
 export interface ManyResultItem {
