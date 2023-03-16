@@ -13,6 +13,6 @@ export interface MetaData {
 
 export interface MetaDataV2 extends MetaData {
   type: Types;
-  dateAd: string;
-  dateChange: string;
+  dateAd?: string;
+  dateChange?: string;
 }
