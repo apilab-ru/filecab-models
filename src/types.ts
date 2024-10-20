@@ -1,7 +1,7 @@
 export enum Types {
   anime = 'anime',
   films = 'films',
-  tv = 'tv'
+  tv = 'tv',
 }
 
 export const TYPES = [

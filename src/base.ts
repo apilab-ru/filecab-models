@@ -1,5 +1,5 @@
 import { LibraryItemType } from './anime';
-import { Types } from "./types";
+import { Types } from './types';
 
 export interface Item {
   id: number;
@@ -42,10 +42,18 @@ export interface SearchRequest {
   year?: string; //ids
 }
 
-export function extractSearchId<T extends SearchId>(data: T): SearchId | undefined {
-  const fields: (keyof SearchId)[]= ['id', 'shikimoriId', 'smotretId', 'kinopoiskId', 'imdbId'];
+export function extractSearchId<T extends SearchId>(
+  data: T,
+): SearchId | undefined {
+  const fields: (keyof SearchId)[] = [
+    'id',
+    'shikimoriId',
+    'smotretId',
+    'kinopoiskId',
+    'imdbId',
+  ];
 
-  if (fields.every(key => !data[key])) {
+  if (fields.every((key) => !data[key])) {
     return undefined;
   }
 
@@ -55,7 +63,7 @@ export function extractSearchId<T extends SearchId>(data: T): SearchId | undefin
     if (data[key]) {
       result[key] = data[key];
     }
-  })
+  });
 
   return result;
 }
@@ -78,5 +86,3 @@ export interface FilmSearchParams extends SearchRequest {
   imdbId?: number;
   type?: Types;
 }
-
-

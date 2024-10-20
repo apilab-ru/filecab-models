@@ -1,6 +1,6 @@
 import { LibraryItemType } from './anime';
 import { MetaData, MetaDataV2 } from './meta-data';
-import { Types } from "./types";
+import { Types } from './types';
 
 export interface Tag {
   name: string;

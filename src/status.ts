@@ -10,12 +10,16 @@ export enum StatusList {
   complete = 'complete',
   process = 'process',
   drop = 'drop',
-  hide = 'hide'
+  hide = 'hide',
 }
 
 export const STATUS_WITH_PROGRESS = [StatusList.process, StatusList.drop];
 
-export const STATUS_WITH_STARS = [StatusList.process, StatusList.drop, StatusList.complete];
+export const STATUS_WITH_STARS = [
+  StatusList.process,
+  StatusList.drop,
+  StatusList.complete,
+];
 
 export const STATUS_LIST: StatusData[] = [
   {

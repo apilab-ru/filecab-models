@@ -1,7 +1,6 @@
 import { Item } from './base';
 
-export interface Anime extends Item {
-}
+export interface Anime extends Item {}
 
 export interface AnimeRequestResponse {
   data: SmotretAnimeResponseItem[];
@@ -15,7 +14,7 @@ export interface SmotretAnimeResponseItem {
     ja: string;
     romaji: string;
     short: string;
-  },
+  };
   posterUrl: string;
   descriptions: AnimeDescription[];
   genres: AnimeGenre[];
@@ -50,7 +49,7 @@ export enum AnimeDescriptionSource {
   shikimori = 'shikimori.org',
   word_art = 'world-art.ru',
   anime_365 = 'Anime 365',
-  word_of_anime = 'Word of anime'
+  word_of_anime = 'Word of anime',
 }
 
 export enum LibraryItemType {

@@ -2,7 +2,7 @@ export enum GenreKind {
   anime = 'anime',
   manga = 'manga',
   tv = 'tv',
-  films = 'films'
+  films = 'films',
 }
 
 export interface Genre {
